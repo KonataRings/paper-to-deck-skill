@@ -1,0 +1,169 @@
+{
+ "case_id": "EXAMPLE-DECK",
+ "status": "success",
+ "editable_deck": "C:\\Users\\Lenovo\\.bohrium\\desktop\\prod\\sessions\\7fdc39ea-0f32-4b7a-bda1-10fa6ec90b19\\bohrium\\tasks\\p3-ppt\\submission\\examples\\expected_output\\deck.pptx",
+ "preview": {
+  "deck_preview.pdf": "C:\\Users\\Lenovo\\.bohrium\\desktop\\prod\\sessions\\7fdc39ea-0f32-4b7a-bda1-10fa6ec90b19\\bohrium\\tasks\\p3-ppt\\submission\\examples\\expected_output\\deck_preview.pdf",
+  "deck_audit.json": "C:\\Users\\Lenovo\\.bohrium\\desktop\\prod\\sessions\\7fdc39ea-0f32-4b7a-bda1-10fa6ec90b19\\bohrium\\tasks\\p3-ppt\\submission\\examples\\expected_output\\deck_audit.json"
+ },
+ "outline": [
+  {
+   "index": 1,
+   "layout": "title",
+   "title": "Relay gain adapts to stimulus history in a synthetic preparation",
+   "claim": "The through-line of this talk",
+   "page": 1,
+   "has_notes": true
+  },
+  {
+   "index": 2,
+   "layout": "outline",
+   "title": "Outline",
+   "claim": "Give the structure up front",
+   "page": 1,
+   "has_notes": true
+  },
+  {
+   "index": 3,
+   "layout": "bullets",
+   "title": "Abstract",
+   "claim": "We study how a relay stage adjusts its gain when the same stimulus is repeated.",
+   "page": 1,
+   "has_notes": true
+  },
+  {
+   "index": 4,
+   "layout": "bullets",
+   "title": "1 Introduction",
+   "claim": "Adaptation is widely observed, yet the stage at which gain changes remains unclear.",
+   "page": 1,
+   "has_notes": true
+  },
+  {
+   "index": 5,
+   "layout": "bullets",
+   "title": "2 Methods",
+   "claim": "Stimuli of 200 ms were delivered at 1 Hz for ten trials.",
+   "page": 1,
+   "has_notes": true
+  },
+  {
+   "index": 6,
+   "layout": "bullets",
+   "title": "3 Results",
+   "claim": "The first trial produced the largest response and later trials declined.",
+   "page": 1,
+   "has_notes": true
+  },
+  {
+   "index": 7,
+   "layout": "bullets",
+   "title": "4 Discussion",
+   "claim": "The gain change is already visible at the relay, which places the adaptation before the recorder.",
+   "page": 1,
+   "has_notes": true
+  },
+  {
+   "index": 8,
+   "layout": "bullets",
+   "title": "5 Conclusion",
+   "claim": "Relay gain declines with repeated stimulation and the decline is intrinsic to the relay.",
+   "page": 2,
+   "has_notes": true
+  },
+  {
+   "index": 9,
+   "layout": "figure",
+   "title": "Figure 1. Representative trace from one preparation: amplitude in mV a…",
+   "claim": "Figure 1. Representative trace from one preparation: amplitude in mV against time in s.",
+   "page": 1,
+   "has_notes": true
+  },
+  {
+   "index": 10,
+   "layout": "figure",
+   "title": "Figure 2. Peak amplitude across ten trials",
+   "claim": "Figure 2. Peak amplitude across ten trials, control arm shown for comparison.",
+   "page": 1,
+   "has_notes": true
+  },
+  {
+   "index": 11,
+   "layout": "conclusion",
+   "title": "Conclusions and next steps",
+   "claim": "Relay gain declines with repeated stimulation and the decline is intrinsic to the relay.",
+   "page": 2,
+   "has_notes": true
+  }
+ ],
+ "evidence_map": [
+  {
+   "slide": 1,
+   "page": 1,
+   "claim": "The through-line of this talk"
+  },
+  {
+   "slide": 2,
+   "page": 1,
+   "claim": "Give the structure up front"
+  },
+  {
+   "slide": 3,
+   "page": 1,
+   "claim": "We study how a relay stage adjusts its gain when the same stimulus is repeated."
+  },
+  {
+   "slide": 4,
+   "page": 1,
+   "claim": "Adaptation is widely observed, yet the stage at which gain changes remains unclear."
+  },
+  {
+   "slide": 5,
+   "page": 1,
+   "claim": "Stimuli of 200 ms were delivered at 1 Hz for ten trials."
+  },
+  {
+   "slide": 6,
+   "page": 1,
+   "claim": "The first trial produced the largest response and later trials declined."
+  },
+  {
+   "slide": 7,
+   "page": 1,
+   "claim": "The gain change is already visible at the relay, which places the adaptation before the recorder."
+  },
+  {
+   "slide": 8,
+   "page": 2,
+   "claim": "Relay gain declines with repeated stimulation and the decline is intrinsic to the relay."
+  },
+  {
+   "slide": 9,
+   "page": 1,
+   "claim": "Figure 1. Representative trace from one preparation: amplitude in mV against time in s."
+  },
+  {
+   "slide": 10,
+   "page": 1,
+   "claim": "Figure 2. Peak amplitude across ten trials, control arm shown for comparison."
+  },
+  {
+   "slide": 11,
+   "page": 2,
+   "claim": "Relay gain declines with repeated stimulation and the decline is intrinsic to the relay."
+  }
+ ],
+ "template_used": "C:\\Users\\Lenovo\\.bohrium\\desktop\\prod\\sessions\\7fdc39ea-0f32-4b7a-bda1-10fa6ec90b19\\bohrium\\tasks\\p3-ppt\\submission\\examples\\case\\artifacts\\org_template.pptx",
+ "notes": [],
+ "uncertainty": "预览由同一份 plan 用 reportlab 绘制，不是 PowerPoint 渲染；换机打开时以 pptx 中的实际字体为准",
+ "contract_fields": [
+  "editable_deck",
+  "preview",
+  "outline",
+  "evidence_map",
+  "status"
+ ],
+ "contract_missing": [],
+ "example": true,
+ "example_notice": "示例输出：由合成论文与合成模板产生，用于说明接口与字段，不是平台正式案例的结果"
+}
