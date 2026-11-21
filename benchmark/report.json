@@ -1,0 +1,91 @@
+{
+ "passed": 6,
+ "total": 6,
+ "cases": [
+  {
+   "id": "english-paper",
+   "expect": "success",
+   "ok": true,
+   "why": "status=True, min_slides=True, notes=True, audit=True, figure_slide=True",
+   "slides": 8,
+   "checks": {
+    "status": true,
+    "min_slides": true,
+    "notes": true,
+    "audit": true,
+    "figure_slide": true
+   },
+   "size": [
+    13.33,
+    7.5
+   ]
+  },
+  {
+   "id": "chinese-manuscript",
+   "expect": "success",
+   "ok": true,
+   "why": "status=True, min_slides=True, notes=True, audit=True, language=True",
+   "slides": 7,
+   "checks": {
+    "status": true,
+    "min_slides": true,
+    "notes": true,
+    "audit": true,
+    "language": true
+   },
+   "size": [
+    13.33,
+    7.5
+   ]
+  },
+  {
+   "id": "template-4x3",
+   "expect": "success",
+   "ok": true,
+   "why": "status=True, min_slides=True, notes=True, audit=True, size=True",
+   "slides": 7,
+   "checks": {
+    "status": true,
+    "min_slides": true,
+    "notes": true,
+    "audit": true,
+    "size": true
+   },
+   "size": [
+    10.0,
+    7.5
+   ]
+  },
+  {
+   "id": "edited-plan",
+   "expect": "plan",
+   "ok": true,
+   "why": "deck followed the edited plan",
+   "slides": 3
+  },
+  {
+   "id": "no-figures",
+   "expect": "success",
+   "ok": true,
+   "why": "status=True, min_slides=True, notes=True, audit=True, figure_slide=True",
+   "slides": 6,
+   "checks": {
+    "status": true,
+    "min_slides": true,
+    "notes": true,
+    "audit": true,
+    "figure_slide": true
+   },
+   "size": [
+    13.33,
+    7.5
+   ]
+  },
+  {
+   "id": "empty-input",
+   "expect": "insufficient_evidence",
+   "ok": true,
+   "why": "refused and said why"
+  }
+ ]
+}
