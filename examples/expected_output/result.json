@@ -3,6 +3,7 @@
  "status": "success",
  "editable_deck": "C:\\Users\\Lenovo\\.bohrium\\desktop\\prod\\sessions\\7fdc39ea-0f32-4b7a-bda1-10fa6ec90b19\\bohrium\\tasks\\p3-ppt\\submission\\examples\\expected_output\\deck.pptx",
  "preview": {
+  "deck_export.pdf": "C:\\Users\\Lenovo\\.bohrium\\desktop\\prod\\sessions\\7fdc39ea-0f32-4b7a-bda1-10fa6ec90b19\\bohrium\\tasks\\p3-ppt\\submission\\examples\\expected_output\\deck_export.pdf",
   "deck_preview.pdf": "C:\\Users\\Lenovo\\.bohrium\\desktop\\prod\\sessions\\7fdc39ea-0f32-4b7a-bda1-10fa6ec90b19\\bohrium\\tasks\\p3-ppt\\submission\\examples\\expected_output\\deck_preview.pdf",
   "deck_audit.json": "C:\\Users\\Lenovo\\.bohrium\\desktop\\prod\\sessions\\7fdc39ea-0f32-4b7a-bda1-10fa6ec90b19\\bohrium\\tasks\\p3-ppt\\submission\\examples\\expected_output\\deck_audit.json"
  },
@@ -154,8 +155,9 @@
   }
  ],
  "template_used": "C:\\Users\\Lenovo\\.bohrium\\desktop\\prod\\sessions\\7fdc39ea-0f32-4b7a-bda1-10fa6ec90b19\\bohrium\\tasks\\p3-ppt\\submission\\examples\\case\\artifacts\\org_template.pptx",
+ "export_renderer": "plan",
  "notes": [],
- "uncertainty": "预览由同一份 plan 用 reportlab 绘制，不是 PowerPoint 渲染；换机打开时以 pptx 中的实际字体为准",
+ "uncertainty": "PDF 由 同一份 plan 用 reportlab 绘制（本机无 LibreOffice，非 pptx 渲染） 渲染；换机打开时的实际字体仍以 pptx 为准",
  "contract_fields": [
   "editable_deck",
   "preview",
