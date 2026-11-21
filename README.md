@@ -1,4 +1,4 @@
-# 学术 PPT Skill：paper-to-deck
+﻿# 学术 PPT Skill：paper-to-deck
 
 把论文转成**可逐页编辑、带讲稿、可核验**的学术演示文稿。三种任务形态共用一套接口：从论文生成、按模板适配、对已有页结构再编辑。
 
@@ -72,4 +72,6 @@ python benchmark/run_benchmark.py
 
 ## 版本
 
+- 1.1.0：新增 export_pdf.py，装有 LibreOffice 时直接渲染 pptx 为 PDF，否则回退到 plan 绘制并在结果中注明渲染器；自检覆盖渲染器记录。
 - 1.0.0：读论文/计划/生成/预览/审计全链路；模板适配；手改 plan 重生成；自检与 6 例基准。
+
