@@ -1,0 +1,16 @@
+{
+ "case_id": "EXAMPLE-DECK",
+ "workorder": "paper_to_deck",
+ "output_contract": {
+  "required": ["editable_deck", "preview", "outline", "evidence_map", "status"],
+  "properties": {
+   "editable_deck": {"type": "string"},
+   "preview": {"type": "object"},
+   "outline": {"type": "array"},
+   "evidence_map": {"type": "array"},
+   "status": {"type": "string"}
+  }
+ },
+ "minutes": 10,
+ "notes": "synthetic example: one fabricated paper plus a minimal template"
+}
