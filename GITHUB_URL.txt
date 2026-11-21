@@ -1,0 +1,2 @@
+https://github.com/KonataRings/paper-to-deck-skill
+SKILL.md
