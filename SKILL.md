@@ -28,7 +28,7 @@ description: 把论文或研究材料转成可编辑、可讲解、可核验的�
 1. **读数材料。** `read_paper.py` 抽出标题、作者、摘要、各节标题与正文、图表题注，并为每块记页码。PDF 用版式信息判断标题层级；纯文本与 XML 走各自分支。抽不到任何章节时报错，不硬凑。
 2. **定主线与页结构。** `plan.py` 生成 `plan.json`：封面、目录、每节一页、图页、结论页。每页含标题、要点、一句主张（claim）、证据页码、讲稿备注。页数由时长与 `--max-slides` 控制，默认约 1.4 页/分钟。
 3. **按模板生成 pptx。** `build_pptx.py` 优先使用模板的版式与主题，模板缺失时用内置 16:9 版式并给出警告。图页把材料里的图放进去，讲稿写入备注。
-4. **出预览。** `preview.py` 用与 plan 相同的坐标画 PDF（每页一页）与 PNG 缩略图。没有 PowerPoint 或 LibreOffice 也能看到页序、标题与要点。
+4. **出预览与导出。** `export_pdf.py` 先尝试 LibreOffice（`soffice --headless --convert-to pdf`）把真正的 pptx 渲染成 PDF；本机没有 LibreOffice 时回退到 `preview.py` 用同一份 plan 绘制，二者都会在 `export_info.json` 里记明渲染器。没有 PowerPoint 或 LibreOffice 也能看到页序、标题与要点。
 5. **审计。** `audit.py` 打开 pptx 核对页数、标题是否为空、备注是否齐全、文字是否可能溢出、引用字体，以及预览页数是否等于幻灯片页数。
 6. **装配结果。** `run_case.py` 汇总 `result.json`：可编辑稿、预览、页级结构、证据映射与状态。
 
@@ -118,6 +118,7 @@ python scripts/run_case.py --input /input --work /app/work --output /app/output 
 - `scripts/plan.py`：结构 → 页级计划（claim、证据、备注）。
 - `scripts/build_pptx.py`：计划 → pptx（用模板版式与主题）。
 - `scripts/preview.py`：计划 → PDF 预览与 PNG 缩略图。
+- `scripts/export_pdf.py`：优先用 LibreOffice 渲染 pptx 为 PDF，无则回退 plan 绘制并记明渲染器。
 - `scripts/audit.py`：pptx 结构审计。
 - `scripts/run_case.py`：一条命令跑完并装配 `result.json`。
 - `docs/quickstart.md`：三分钟上手。
