@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+﻿#!/usr/bin/env python3
 """Self-test for the deck skill: paper route, plan route, template, refusals."""
 import json
 import os
@@ -28,6 +28,15 @@ def last_json(text):
 
 
 def main():
+    shutil.rmtree(TMP, ignore_errors=True)
+    os.makedirs(TMP)
+    try:
+        _run_checks()
+    finally:
+        shutil.rmtree(TMP, ignore_errors=True)
+
+
+def _run_checks():
     shutil.rmtree(TMP, ignore_errors=True)
     os.makedirs(TMP)
     case = os.path.join(HERE, "examples", "case")
@@ -113,3 +122,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
