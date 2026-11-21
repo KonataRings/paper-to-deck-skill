@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+﻿#!/usr/bin/env python3
 """Run the deck benchmark and report which documented behaviours hold.
 
     python run_benchmark.py --output report.md
@@ -142,8 +142,10 @@ def main():
               ensure_ascii=False, indent=1)
     print(json.dumps({"passed": passed, "total": len(details), "output": a.output},
                      ensure_ascii=False))
+    shutil.rmtree(TMP, ignore_errors=True)
     return 0 if passed == len(details) else 1
 
 
 if __name__ == "__main__":
     sys.exit(main())
+
