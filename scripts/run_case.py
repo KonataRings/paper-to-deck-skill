@@ -106,15 +106,19 @@ def main():
             status = "failed"
             notes.append("deck build failed: %s" % (steps[-1]["err"] or steps[-1]["out"])[:200])
 
+        steps.append(run([os.path.join(HERE, "export_pdf.py"), "--pptx", deck_path,
+                          "--plan", plan_path, "--output-dir", preview_dir]))
         steps.append(run([os.path.join(HERE, "preview.py"), "--plan", plan_path,
                           "--output-dir", preview_dir, "--basename", "deck_preview",
                           "--png-slides", "3"]))
 
     audit_path = os.path.join(a.output, "deck_audit.json")
     if status == "success":
+        check_pdf = os.path.join(preview_dir, "deck_export.pdf")
+        if not os.path.exists(check_pdf):
+            check_pdf = os.path.join(preview_dir, "deck_preview.pdf")
         steps.append(run([os.path.join(HERE, "audit.py"), "--pptx", deck_path,
-                          "--plan", plan_path,
-                          "--preview", os.path.join(preview_dir, "deck_preview.pdf"),
+                          "--plan", plan_path, "--preview", check_pdf,
                           "--output", audit_path]))
         if steps[-1]["rc"] != 0:
             status = "partial"
@@ -128,8 +132,12 @@ def main():
                     "has_notes": bool(s.get("notes"))} for s in plan.get("slides") or []]
 
     outputs = {name: os.path.join(a.output, name) for name in
-               ("deck.pptx", "deck_preview.pdf", "deck_preview.png", "deck_audit.json")
+               ("deck.pptx", "deck_export.pdf", "deck_preview.pdf", "deck_audit.json")
                if os.path.exists(os.path.join(a.output, name))}
+    export_info = {}
+    export_path = os.path.join(a.output, "export_info.json")
+    if os.path.exists(export_path):
+        export_info = json.load(open(export_path, encoding="utf-8-sig"))
 
     result = {
         "case_id": inventory["case_id"],
@@ -140,10 +148,12 @@ def main():
         "evidence_map": [{"slide": s["index"], "page": s["page"], "claim": s["claim"]}
                          for s in outline if s.get("page")],
         "template_used": templates[0] if templates else None,
+        "export_renderer": export_info.get("renderer"),
         "notes": notes,
-        "uncertainty": ("预览由同一份 plan 用 reportlab 绘制，不是 PowerPoint 渲染；"
-                        "换机打开时以 pptx 中的实际字体为准" if outputs.get("deck_preview.pdf")
-                        else "没有预览文件"),
+        "uncertainty": ("PDF 由 %s 渲染；换机打开时的实际字体仍以 pptx 为准" % (
+            "LibreOffice" if export_info.get("renderer") == "libreoffice" else
+            "同一份 plan 用 reportlab 绘制（本机无 LibreOffice，非 pptx 渲染）")
+            if export_info else "没有预览文件"),
     }
 
     contract = case.get("output_contract") or {}
