@@ -1,0 +1,104 @@
+{
+ "pptx": "C:\\Users\\Lenovo\\.bohrium\\desktop\\prod\\sessions\\7fdc39ea-0f32-4b7a-bda1-10fa6ec90b19\\bohrium\\tasks\\p3-ppt\\submission\\examples\\expected_output\\deck.pptx",
+ "ok": true,
+ "problems": [],
+ "warnings": [],
+ "slides": [
+  {
+   "index": 1,
+   "title": "Relay gain adapts to stimulus history in a synthetic preparation",
+   "shapes": 3,
+   "chars": 133,
+   "notes": true,
+   "overflow_risk": false
+  },
+  {
+   "index": 2,
+   "title": "Outline",
+   "shapes": 3,
+   "chars": 85,
+   "notes": true,
+   "overflow_risk": false
+  },
+  {
+   "index": 3,
+   "title": "Abstract",
+   "shapes": 3,
+   "chars": 260,
+   "notes": true,
+   "overflow_risk": false
+  },
+  {
+   "index": 4,
+   "title": "1 Introduction",
+   "shapes": 3,
+   "chars": 260,
+   "notes": true,
+   "overflow_risk": false
+  },
+  {
+   "index": 5,
+   "title": "2 Methods",
+   "shapes": 3,
+   "chars": 289,
+   "notes": true,
+   "overflow_risk": false
+  },
+  {
+   "index": 6,
+   "title": "3 Results",
+   "shapes": 3,
+   "chars": 315,
+   "notes": true,
+   "overflow_risk": false
+  },
+  {
+   "index": 7,
+   "title": "4 Discussion",
+   "shapes": 3,
+   "chars": 282,
+   "notes": true,
+   "overflow_risk": false
+  },
+  {
+   "index": 8,
+   "title": "5 Conclusion",
+   "shapes": 3,
+   "chars": 219,
+   "notes": true,
+   "overflow_risk": false
+  },
+  {
+   "index": 9,
+   "title": "Figure 1. Representative trace from one preparation: amplitude in mV a…",
+   "shapes": 4,
+   "chars": 170,
+   "notes": true,
+   "overflow_risk": false
+  },
+  {
+   "index": 10,
+   "title": "Figure 2. Peak amplitude across ten trials",
+   "shapes": 4,
+   "chars": 132,
+   "notes": true,
+   "overflow_risk": false
+  },
+  {
+   "index": 11,
+   "title": "Conclusions and next steps",
+   "shapes": 3,
+   "chars": 234,
+   "notes": true,
+   "overflow_risk": false
+  }
+ ],
+ "slide_size_in": [
+  13.33,
+  7.5
+ ],
+ "slide_count": 11,
+ "fonts": [],
+ "claims": 11,
+ "preview_pages": 11
+}
