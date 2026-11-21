@@ -1,0 +1,12 @@
+{
+ "pdf": "C:\\Users\\Lenovo\\.bohrium\\desktop\\prod\\sessions\\7fdc39ea-0f32-4b7a-bda1-10fa6ec90b19\\bohrium\\tasks\\p3-ppt\\submission\\examples\\expected_output\\deck_preview.pdf",
+ "pdf_bytes": 26061,
+ "pages": 11,
+ "pngs": [
+  "C:\\Users\\Lenovo\\.bohrium\\desktop\\prod\\sessions\\7fdc39ea-0f32-4b7a-bda1-10fa6ec90b19\\bohrium\\tasks\\p3-ppt\\submission\\examples\\expected_output\\preview_p1.png",
+  "C:\\Users\\Lenovo\\.bohrium\\desktop\\prod\\sessions\\7fdc39ea-0f32-4b7a-bda1-10fa6ec90b19\\bohrium\\tasks\\p3-ppt\\submission\\examples\\expected_output\\preview_p2.png",
+  "C:\\Users\\Lenovo\\.bohrium\\desktop\\prod\\sessions\\7fdc39ea-0f32-4b7a-bda1-10fa6ec90b19\\bohrium\\tasks\\p3-ppt\\submission\\examples\\expected_output\\preview_p3.png"
+ ],
+ "font": "DeckFont",
+ "renderer": "reportlab from plan (not PowerPoint)"
+}
