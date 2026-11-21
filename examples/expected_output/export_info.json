@@ -1,0 +1,10 @@
+{
+ "pptx": "C:\\Users\\Lenovo\\.bohrium\\desktop\\prod\\sessions\\7fdc39ea-0f32-4b7a-bda1-10fa6ec90b19\\bohrium\\tasks\\p3-ppt\\submission\\examples\\expected_output\\deck.pptx",
+ "renderer": "plan",
+ "pdf": "C:\\Users\\Lenovo\\.bohrium\\desktop\\prod\\sessions\\7fdc39ea-0f32-4b7a-bda1-10fa6ec90b19\\bohrium\\tasks\\p3-ppt\\submission\\examples\\expected_output\\deck_export.pdf",
+ "notes": [
+  "LibreOffice not available; no true pptx render on this machine"
+ ],
+ "pages": 11,
+ "caveat": "PDF drawn from the slide plan, not a render of the pptx"
+}
