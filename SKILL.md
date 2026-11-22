@@ -83,6 +83,8 @@ python scripts/run_case.py --input /input --work /app/work --output /app/output 
 
 先读 `work/run_report.json` 的 `rc` 与 `stderr`，区分参数问题与材料问题。已生成的 plan 可复用：只重跑 `build_pptx.py` 与 `audit.py`，避免重复读论文。
 
+本包只含文本资源：平台把 PDF/PPTX/PNG 判为不支持的文件类型，混入会让整次提交在预检被拒。演示用的论文与模板由 `examples/make_example_inputs.py` 即时生成，成稿与预览在运行时产出。
+
 ## 质量闸门
 
 1. 每页有标题与讲稿备注。
