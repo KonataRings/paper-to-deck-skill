@@ -1,4 +1,4 @@
-﻿#!/usr/bin/env python3
+#!/usr/bin/env python3
 """Self-test for the deck skill: paper route, plan route, template, refusals."""
 import json
 import os
@@ -39,7 +39,14 @@ def main():
 def _run_checks():
     shutil.rmtree(TMP, ignore_errors=True)
     os.makedirs(TMP)
-    case = os.path.join(HERE, "examples", "case")
+    # fixtures are generated here: the platform accepts only text resources, so the
+    # package ships the generator instead of a committed PDF and pptx
+    case = os.path.join(TMP, "case")
+    os.makedirs(os.path.join(case, "artifacts"), exist_ok=True)
+    shutil.copy2(os.path.join(HERE, "examples", "case", "case.json"),
+                 os.path.join(case, "case.json"))
+    run([os.path.join(HERE, "examples", "make_example_inputs.py"),
+         "--outdir", os.path.join(case, "artifacts")])
     work, out = os.path.join(TMP, "work"), os.path.join(TMP, "out")
 
     # 1. paper + template route
