@@ -5,10 +5,10 @@
 | 文件 | 内容 |
 |-|-|
 | `case/case.json` | 合成案例的契约：`editable_deck`、`preview`、`outline`、`evidence_map`、`status` |
-| `case/artifacts/paper.pdf` | 合成论文：标题、作者、摘要、四节、两条图注，用于演示读文与页码引用 |
-| `case/artifacts/org_template.pptx` | 合成模板：16:9 版式，用于演示模板适配 |
-| `make_example_inputs.py` | 重新生成上面两份合成材料的脚本 |
-| `expected_output/` | 由上面输入实际跑出的结果，`result.json` 已标 `"example": true` |
+| `make_example_inputs.py` | 生成合成论文 `paper.pdf` 与合成模板 `org_template.pptx` |
+| `expected_output/result.json` | 由合成材料实际跑出的结果，已标 `"example": true` |
+
+**只发文本资源。** 平台把 PDF/PPTX/PNG 判为不支持的文件类型，会让整次提交在预检被拒。因此本包不带任何二进制文件：合成论文与模板由脚本即时生成，成稿与预览也在运行时产出。
 
 复现：
 
@@ -17,6 +17,8 @@ python examples/make_example_inputs.py --outdir examples/case/artifacts
 python scripts/run_case.py --input examples/case --work /tmp/work --output /tmp/out --minutes 10
 ```
 
-打开 `expected_output/deck.pptx` 可以看到：11 页，每页都有讲稿备注，页脚标注 `页码 · 原文页码`；`deck_audit.json` 记录页数、备注、字体与预览一致性；`deck_preview.pdf` 用于没有 PowerPoint 的机器上核对页序。
+跑完在 `/tmp/out` 下会得到 `deck.pptx`、`deck_export.pdf`（有 LibreOffice 时是真正的 pptx 渲染，否则为 plan 绘制，`export_info.json` 会写明）、`deck_preview.pdf`、`preview_p*.png` 与 `deck_audit.json`。
+
+`expected_output/result.json` 里的路径是运行时路径，用于说明字段结构；它对应的二进制产物不随包发布。
 
 论文内容是编的（"relay gain adapts to repeated stimulation"），不要把其中的数值当作文献数据。
